@@ -10,11 +10,11 @@ Project 2 is culminating exercise for the digital forensics portion of CS483 in 
 - Include screen captures or tool output as necessary to support your analysis.
 - Your report doesn't need to cover every detail of the investigation, but should focus on the timeline of actions that occured which put company data at risk.
 - Whenever possible, corroborate your findings between different evidence sources.  For instance, if a file was transferred across the network and executed, you should have evidence from the network capture, event logs, registry and the filesystem.  
-- Provide recommendations for future network and host signatures that could be implemented to detect malicious activity in the future. (yara signatures)
+- Provide recommendations for network and host signatures that could be implemented to detect malicious activity in the future. (yara signatures)
 
 ## Evidence
 - All evidence will be found on the server at `//server.cs483.eecs.net/cases/pwndCase`
-- The captured sparce disk images can be browsed with AcessData FTK Imager, and mounted as an additional drive for follow-on analyis with other tools.  The forensic disk images are the files with the '.ad1' file extention.  
+- The captured sparse disk images can be browsed with AcessData FTK Imager, and mounted as an additional drive for follow-on analyis with other tools.  The forensic disk images are the files with the '.ad1' file extention.  
 - Memory samples (`.mem`) can be analyzed with volatility or Redline.
 
 ## Scenario 
