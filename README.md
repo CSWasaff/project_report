@@ -1,32 +1,67 @@
-# project2
-cs483 project 2 : techincal report writing
+# Project 2: Techincal Report Writing
 
 
-Project 2 is culminating exercise for the digital forensics portion of CS483 in which you will demonstrate your ability to synthesize raw data from a incident response investigation into a summarized report suitable for your supervisor and the "customer", a victim company in this scenario.  
+Project 2 is culminating exercise for the forensics foundations portion of CS483
+in which you will demonstrate your ability to synthesize raw data from
+a incident response investigation into a summarized report suitable for your
+supervisor and the "customer", a victim company in this scenario.
 
 ## Requirements
-- Follow the guidance in Chapter 16, _Report Writing_, of IR3e when you write your report.
-- The report should be written in a GitHub supported markup language you are comfortable with {markdown, ascii doc, or reStructuredText}.  Submit your report as contributions to this repository.
+
+- Follow the guidance in Chapter 16, _Report Writing_, of IR3e when you write
+  your report.
+- Your report should be at least 3 pages, but no longer than 6 pages, excluding
+  appendices.
+- The report can be written in either Markdown or using a Word Document. Either
+  will be submitted via this repository.
 - Include screen captures or tool output as necessary to support your analysis.
-- Your report doesn't need to cover every detail of the investigation, but should focus on the timeline of actions that occured which put company data at risk.
-- Whenever possible, corroborate your findings between different evidence sources.  For instance, if a file was transferred across the network and executed, you should have evidence from the network capture, event logs, registry and the filesystem.  
-- Provide recommendations for network and host signatures that could be implemented to detect malicious activity in the future. (yara signatures)
+- Your report doesn't need to cover every detail of the investigation, but
+  should focus on the timeline of actions that occurred which put company data
+  at risk.
+- Whenever possible, corroborate your findings between different evidence
+  sources.  For instance, if a file was transferred across the network and
+  executed, you should have evidence from the network capture, event logs,
+  registry and the filesystem.  
+- Provide recommendations for network and host signatures that could be
+  implemented to detect malicious activity in the future. For example using yara
+  signatures
 
 ## Evidence
-- All evidence will be found on the server at `//server.cs483.eecs.net/cases/pwndCase`
-- The captured sparse disk images can be browsed with AcessData FTK Imager, and mounted as an additional drive for follow-on analyis with other tools.  The forensic disk images are the files with the '.ad1' file extention.  
+- All evidence will be found on your assigned server on https://vcsa1.eecs.net/
+- The captured sparse disk images can be browsed with AcessData FTK Imager, and
+  mounted as an additional drive for follow-on analysis with other tools.  The
+  forensic disk images are the files with the '.ad1' file extension.  
 - Memory samples (`.mem`) can be analyzed with volatility or Redline.
 
 ## Scenario 
 
-You are the team lead for the Johnson, Johnson, and Johnson LLP Incident Reponse and Retribution Team.  Your team has just finished collecting the evidence from an intrusion into a customer network, and the victim company is worried that intellectual property has been stolen.  You need to provide a report to your leadership and to the Chief Information Security Officer (CISO) for Precision Widgets of North Dakota.  Unfortunately, although your team collected all the data you asked them to collect, its now the weekend and the report is due first thing Monday morning.  You won't be able to ask your team any clarifying questions!!  The customer, PWND, is most concerned with identifying the lateral movement within their organization and the exfiltration of sensitive data.  
+You are the team lead for the Johnson, Johnson, and Johnson LLP Incident
+Response and Retribution Team.  Your team has just finished collecting the
+evidence from an intrusion into a customer network, and the victim company is
+worried that intellectual property has been stolen.  You need to provide
+a report to your leadership and to the Chief Information Security Officer (CISO)
+for Precision Widgets of North Dakota.  Unfortunately, although your team
+collected all the data you asked them to collect, its now the weekend and the
+report is due first thing Monday morning.  You won't be able to ask your team
+any clarifying questions!!  The customer, PWND, is most concerned with
+identifying the lateral movement within their organization and the exfiltration
+of sensitive data.  
 
 ### Background:
-Precision Widgets of North Dakota is a manufacturer of high tech precision aircraft and mobility parts primarily for government customers across the globe. PWND owns patents for several processes and designs which are the foundation of their brand and their most precious asset.
 
-PWND was recently outbid on a contract to manufacture 150,000 Rascal scooter performance exhaust systems for the local government of Fort Lauderdale Florida. Due to PWND's previous success in this area and substantial cost advantages in the market PWND's CEO and founder Billy Honeydew immediately suspects foul play.
+Precision Widgets of North Dakota is a manufacturer of high tech precision
+aircraft and mobility parts primarily for government customers across the globe.
+PWND owns patents for several processes and designs which are the foundation of
+their brand and their most precious asset.
 
-Your team is an incident response consultant from Johnson and Johnson and Johnson LLP tasked with discovering if there was data stolen from the PWND network, and if so how.
+PWND was recently outbid on a contract to manufacture 150,000 Rascal scooter
+performance exhaust systems for the local government of Fort Lauderdale Florida.
+Due to PWND's previous success in this area and substantial cost advantages in
+the market PWND's CEO and founder Billy Honeydew immediately suspects foul play.
+
+Your team is an incident response consultant from Johnson and Johnson and
+Johnson LLP tasked with discovering if there was data stolen from the PWND
+network, and if so how.
 
 ### Data from the team
 
@@ -58,7 +93,7 @@ Questions:
 	- What data stream of the payload on disk indicates where it came from? `Zone Identifier`
 	- In the decoded payload instructions that would be run on a x86 system, what is the exact path defined in "DownloadData"? http://138.68.64.108:4443/$n
 	- What is the name of the process on PWNDITADMIN that has executable injected code? What is the 2 byte hex string that indicates this to you? Answer in form processname,hexbytes    `TPAutoConnSvc.exe,4d5a`
-	-  What is the size in bytes of the file uploaded by the hacker to PWNDITADMIN? Based upon the differences in the created, modified and accessed times what file operation do you theorize was used to put it there? Format: size,operation    `2916,copy`
+	- What is the size in bytes of the file uploaded by the hacker to PWNDITADMIN? Based upon the differences in the created, modified and accessed times what file operation do you theorize was used to put it there? Format: size,operation    `2916,copy`
 - Actions on Objectives
 	- How much data (round to nearest MB) was transferred from the system that data was exfiltrated from? 11
 	- What is the filename of the staging tool used? 7.exe
