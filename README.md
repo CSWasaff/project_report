@@ -6,6 +6,13 @@ in which you will demonstrate your ability to synthesize raw data from
 a incident response investigation into a summarized report suitable for your
 supervisor and the "customer", a victim company in this scenario.
 
+## Admin
+
+- Points: 125
+- Released: 0920, 12 April
+- Due: 1020, 22 April
+- Team Size: 2
+
 ## Requirements
 
 - Follow the guidance in Chapter 16, _Report Writing_, of IR3e when you write
