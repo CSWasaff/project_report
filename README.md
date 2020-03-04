@@ -9,8 +9,8 @@ supervisor and the "customer", a victim company in this scenario.
 ## Admin
 
 - Points: 125
-- Released: 0920, 12 April
-- Due: 1020, 22 April
+- Released: 04 March 
+- Due: 1025, 2 April
 - Team Size: 2
 
 ## Requirements
