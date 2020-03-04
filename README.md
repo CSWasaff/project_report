@@ -19,12 +19,12 @@ The Technical Report is a culminating exercise for the forensics foundations por
 	- Screen captures should not be used for tools that produce plain text output, such information should be presented in code blocks or monospaced text as appropriate.
 - Your report doesn't need to cover every detail of the investigation, but should focus on the timeline of actions that occurred which put company data at risk.
 - Whenever possible, corroborate your findings between different evidence sources.  For instance, if a file was transferred across the network and executed, you should have evidence from the network capture, event logs, registry and the filesystem.  
-- Provide recommendations for network and host signatures that could be implemented to detect malicious activity in the future. For example using yara signatures
+- Provide recommendations for network and host signatures that could be implemented to detect malicious activity in the future. For example using `yara` signatures
 
 ## Evidence
 - All evidence will be found on your assigned server on <https://vcsa1.eecs.net/>
 	- Evidence is located on the Windows 10 lab machines in `Z:\project_report_writing\`
-- The captured sparse disk images can be browsed with AcessData FTK Imager, and mounted as an additional drive for follow-on analysis with other tools.  The forensic disk images are the files with the '.ad1' file extension.  
+- The captured sparse disk images can be browsed with AcessData FTK Imager, and mounted as an additional drive for follow-on analysis with other tools.  The forensic disk images are the files with the `.ad1` file extension.  
 - Memory samples (`.mem`) can be analyzed with `volatility` or Redline.
 
 ## Scenario 
