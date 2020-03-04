@@ -1,10 +1,7 @@
-# Project 2: Techincal Report Writing
+# Project: Techincal Report Writing
 
 
-Project 2 is culminating exercise for the forensics foundations portion of CS483
-in which you will demonstrate your ability to synthesize raw data from
-a incident response investigation into a summarized report suitable for your
-supervisor and the "customer", a victim company in this scenario.
+The Technical Report is a culminating exercise for the forensics foundations portion of CS483 in which you will demonstrate your ability to synthesize raw data from a incident response investigation into a summarized report suitable for your supervisor and the "customer", a victim company in this scenario.
 
 ## Admin
 
@@ -15,30 +12,20 @@ supervisor and the "customer", a victim company in this scenario.
 
 ## Requirements
 
-- Follow the guidance in Chapter 16, _Report Writing_, of IR3e when you write
-  your report.
-- Your report should be at least 3 pages, but no longer than 6 pages, excluding
-  appendices.
-- The report can be written in either Markdown or using a Word Document. Either
-  will be submitted via this repository.
+- Follow the guidance in Chapter 16, _Report Writing_, of IR3e when you write your report.
+- Your report should be at least 5 pages, but no longer than 8 pages, excluding appendices.
+- The report must be submitted as a pdf. The document can be generated in whatever manner the team prefers (LaTeX, Overleaf, Word, Markdown via Pandoc, etc).
 - Include screen captures or tool output as necessary to support your analysis.
-- Your report doesn't need to cover every detail of the investigation, but
-  should focus on the timeline of actions that occurred which put company data
-  at risk.
-- Whenever possible, corroborate your findings between different evidence
-  sources.  For instance, if a file was transferred across the network and
-  executed, you should have evidence from the network capture, event logs,
-  registry and the filesystem.  
-- Provide recommendations for network and host signatures that could be
-  implemented to detect malicious activity in the future. For example using yara
-  signatures
+	- Screen captures should not be used for tools that produce plain text output, such information should be presented in code blocks or monospaced text as appropriate.
+- Your report doesn't need to cover every detail of the investigation, but should focus on the timeline of actions that occurred which put company data at risk.
+- Whenever possible, corroborate your findings between different evidence sources.  For instance, if a file was transferred across the network and executed, you should have evidence from the network capture, event logs, registry and the filesystem.  
+- Provide recommendations for network and host signatures that could be implemented to detect malicious activity in the future. For example using yara signatures
 
 ## Evidence
-- All evidence will be found on your assigned server on https://vcsa1.eecs.net/
-- The captured sparse disk images can be browsed with AcessData FTK Imager, and
-  mounted as an additional drive for follow-on analysis with other tools.  The
-  forensic disk images are the files with the '.ad1' file extension.  
-- Memory samples (`.mem`) can be analyzed with volatility or Redline.
+- All evidence will be found on your assigned server on <https://vcsa1.eecs.net/>
+	- Evidence is located on the Windows 10 lab machines in `Z:\project_report_writing\`
+- The captured sparse disk images can be browsed with AcessData FTK Imager, and mounted as an additional drive for follow-on analysis with other tools.  The forensic disk images are the files with the '.ad1' file extension.  
+- Memory samples (`.mem`) can be analyzed with `volatility` or Redline.
 
 ## Scenario 
 
