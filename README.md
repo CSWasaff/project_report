@@ -11,7 +11,7 @@ supervisor and the "customer", a victim company in this scenario.
 - Points: 125
 - Released: 04 March 
 - Due: 1025, 2 April
-- Team Size: 2
+- Team Size: 3
 
 ## Requirements
 
